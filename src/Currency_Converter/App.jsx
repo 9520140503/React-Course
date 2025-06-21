@@ -43,13 +43,14 @@ function App() {
                 >
                     <div className="w-full mb-1">
                         <InputBox
-                            label="From"
+                            label="To"
                             amount={amount}
                             currencyOptions={options}
-                            onCurrencyChange={(currency) => setFrom(currency)}
+                            onCurrencyChange={(currency) => {setFrom(currency)}}
                             selectCurrency={from}
                             onAmountChange={(amount) => setAmount(amount)}
                         />
+                        {console.log(amount)}
                     </div>
                     <div className="relative w-full h-0.5">
                         <button
@@ -69,6 +70,7 @@ function App() {
                             selectCurrency={to}
                             amountDisable
                         />
+                        {/* {console.log(convertedAmount)} */}
                     </div>
                     <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
                         Convert {from.toUpperCase()} to {to.toUpperCase()}
