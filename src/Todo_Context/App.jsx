@@ -21,7 +21,7 @@ function App() {
 
    const toggleComplete = (id) => {
         //Here overriding the complete value --->> 
-        setTodos((prev) => prev.map((prevTodo) => prevTodo.id === id ? {...prevTodo,completed:!prevTodo.completed}:prevTodoC))
+        setTodos((prev) => prev.map((prevTodo) => prevTodo.id === id ? {...prevTodo,completed:!prevTodo.completed}:prevTodo))
    }
 
    useEffect(() => {
