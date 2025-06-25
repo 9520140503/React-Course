@@ -18,7 +18,9 @@ const todoSlice = createSlice({
         updateTodo:(state,action) => {
             const {id,newText} = action.payload
             const todo = state.todos.find((todo) => todo.id === id)
-            if(todo) todo.text = newText
+            if(todo){
+                todo.text = newText
+            }
         },
         removeTodo:(state,action) => {
             state.todos.filter((todo) => todo.id !== action.payload)
